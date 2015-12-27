@@ -10,8 +10,12 @@ description: Xizhi's Ideas & Blogs
 # baseurl: "" # the subpath of your site, e.g. /blog/
 # url: "http://yourdomain.com" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
-github_username:  LiXizhi
+github_username: LiXizhi
 permalink: /:year/:month/:day/:title/
+
+# for duoshuo commenting system
+duoshuo_shortname: lixizhi
+duoshuo_url: "http://lixizhi.github.io"
 
 # Build settings
 markdown: kramdown
