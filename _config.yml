@@ -1,5 +1,5 @@
 # Site settings
-title: LiXizh's Personal Website
+title: LiXizhi's Personal Website
 email: lixizhi@yeah.net
 description: Xizhi's Ideas & Blogs
 # > # this means to ignore newlines until "baseurl:"
@@ -13,7 +13,7 @@ description: Xizhi's Ideas & Blogs
 github_username: LiXizhi
 permalink: /:year/:month/:day/:title/
 
-# for duoshuo commenting system
+# for duoshuo.com commenting system, uncomment following line if you do not want to include duoshuo.com. 
 duoshuo_shortname: lixizhi
 duoshuo_url: "http://lixizhi.github.io"
 
