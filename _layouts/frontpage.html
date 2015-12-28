@@ -4,14 +4,10 @@ layout: default
 <div id="index" class="row">
   <div class="col-sm-9">
     <div class="post-area">
-
-	  <div class="post-list-header">
-        Welcome to my website
-      </div>	
-	  <p>This is the place where I share my ideas on topics like CAD software design, artificial intelligence and education. 
-Feel free to send me emails or join our team. </p>
-	  <h1>Posts</h1>
-	  
+	  <article>
+        {{content}}
+      </article>
+      <hr>
       <div class="post-list-body">
         <div class="all-posts" post-cate="All">
           {% for post in site.posts %}
@@ -40,7 +36,6 @@ Feel free to send me emails or join our team. </p>
             {% endfor %}
           </div>
         {% endfor %}
-        
         <!-- </div> -->
       </div>
     </div>
