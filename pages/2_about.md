@@ -17,9 +17,9 @@ Google github+jeckyll for details.
 ### Admin tools
 * Jekyll + [lixizhi.duoshuo.com](http://lixizhi.duoshuo.com/admin/)
 * Jekyll + [lixizhi.disqus.com](http://lixizhi.disqus.com/admin/)
-* Jekyll templates: [http://jekyllthemes.org]
-   * Theme template used: [cool-concise](http://jekyllthemes.org/themes/cool-concise-high-end/)
-* Jekyll official site: [http://jekyllrb.com]
+* Jekyll theme templates: [jekyllthemes.org](http://jekyllthemes.org)
+   * Theme used: [cool-concise](http://jekyllthemes.org/themes/cool-concise-high-end/)
+* Jekyll official site: [jekyllrb.com](http://jekyllrb.com)
 * YAML for human readable markdown: [yaml.org](http://www.yaml.org/)
 * markdown reference: [kramdown](http://kramdown.gettalong.org/quickref.html)
 
