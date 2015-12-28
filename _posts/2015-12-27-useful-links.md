@@ -3,6 +3,7 @@ layout: post
 title:  "useful data"
 date:   2015-12-27
 categories: private
+comments: true
 excerpt: 
 ---
 
