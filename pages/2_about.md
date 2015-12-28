@@ -6,6 +6,9 @@ permalink: /about/
 icon: glyphicon-heart
 ---
 
+* content
+{:toc}
+
 ## About the site
 {:toc}
 This is a personal website of LiXizhi, created with github and jeckyll. 
@@ -23,11 +26,9 @@ Google github+jeckyll for details.
 ### About comments
 Add a variable called `comments` to the [YAML front matter](http://jekyllrb.com/docs/frontmatter/) and set its value to true. A sample might look like:
 
-~~~
-	layout: default
-	comments: true
-	# other options
-~~~
+    layout: default
+    comments: true
+    # other options
 
 In between a `{% if post.comments %}` and a `{% endif %}` tag, add the Universal Embed Code in the appropriate template where you'd like Disqus or Duoshuo to load.
 
