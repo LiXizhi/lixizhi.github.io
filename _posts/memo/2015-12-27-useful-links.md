@@ -1,10 +1,8 @@
 ---
 layout: post
-title:  "useful data"
+title:  "useful links"
 date:   2015-12-27
-categories: private
 comments: true
-excerpt: 
 ---
 
 * content
@@ -14,5 +12,4 @@ excerpt:
 http://www.paracraft.cn
 
 ### NPL
-
 http://www.nplproject.com

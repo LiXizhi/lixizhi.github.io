@@ -34,6 +34,7 @@ Add a variable called `comments` to the [YAML front matter](http://jekyllrb.com/
 
 ### Sample markdowns
 Click view source at the bottom of the page
+
 * Embedding code
 {% highlight lua %}
 local function main()
