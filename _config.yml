@@ -13,9 +13,14 @@ description: Xizhi's Ideas & Blogs
 github_username: LiXizhi
 permalink: /:year/:month/:day/:title/
 
+#########################################
 # for duoshuo.com commenting system, uncomment following line if you do not want to include duoshuo.com. 
 duoshuo_shortname: lixizhi
 duoshuo_url: "http://lixizhi.github.io"
+# disqus.com commenting system. please note that it is exclusive with duoshuo.com
+#disqus_shortname: lixizhi
+#disqus_url: "http://lixizhi.github.io"
+#########################################
 
 # Build settings
 markdown: kramdown

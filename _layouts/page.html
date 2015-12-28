@@ -10,10 +10,15 @@ layout: default
         {{ content }}
     </article>
 </div>
-{% if site.duoshuo_url %}
-<div class="post-area post comment">
-    <!-- duoshuo.com comment start -->
-    <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ site.duoshuo_url }}{{ page.url }}"></div>
-    <!-- duoshuo.com comment end -->
-</div>
+{% if post.comments %}
+	{% if site.duoshuo_url %}
+	<div class="post-area post comment">
+	  <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ site.duoshuo_url }}{{ page.url }}"></div>
+	</div>
+	{% endif %}
+	{% if site.disqus_url %}
+	<div class="post-area post comment">
+		<div id="disqus_thread"></div>
+	</div>
+	{% endif %}
 {% endif %}
