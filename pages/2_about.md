@@ -26,14 +26,15 @@ Create your own website is as easy as clone or fork a [template](https://github.
 ### About comments
 Add a variable called `comments` to the [YAML front matter](http://jekyllrb.com/docs/frontmatter/) and set its value to true. A sample might look like:
 
-    layout: default
+    ---
+    layout: post
     comments: true
     # other options
+    ---
 
-In between a `{% if page.comments %}` and a `{% endif %}` tag, add the Universal Embed Code in the appropriate template where you'd like Disqus or Duoshuo to load.
-
-### Sample markdown
+### Sample markdowns
 Click view source at the bottom of the page
+* Embedding code
 {% highlight lua %}
 local function main()
 	print("hello world")
@@ -48,5 +49,6 @@ My primary research interest is in artificial intelligence, programming and educ
 
 ### 2005 Old Website 
 Here is my old personal website when I was in University. It was mostly on my projects and thoughts before 2005.
+
 * [Xizhi's old website before 2005](/oldsite2005/index.htm). 
 
