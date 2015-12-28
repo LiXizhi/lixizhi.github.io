@@ -33,5 +33,5 @@ Add a variable called `comments` to the [YAML front matter](http://jekyllrb.com/
 In between a `{% if page.comments %}` and a `{% endif %}` tag, add the Universal Embed Code in the appropriate template where you'd like Disqus or Duoshuo to load.
 
 ## About me
-For my personal website before 2005, [see here](/_OldSite2005/index.htm)
+For my personal website before 2005, [see here](/oldsite2005/index.htm)
 
