@@ -55,7 +55,7 @@ nav{
 	border-radius: 0;
 }
 .navbar-nav li{
-	width: 95px;
+	min-width: 95px;
 	text-align: center;
 }
 
