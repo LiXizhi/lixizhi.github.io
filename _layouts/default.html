@@ -23,35 +23,6 @@
 
     {% include footer.html %}
 
-	{% if site.duoshuo_url %}
-    <!-- duoshuo.com javascript include code. include only once per site-->
-	  <script type="text/javascript">
-		var duoshuoQuery = {short_name:"{{ site.duoshuo_shortname }}"};
-		(function() {
-		  var ds = document.createElement('script');
-		  ds.type = 'text/javascript';ds.async = true;
-		  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		  ds.charset = 'UTF-8';
-		  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-		})();
-	  </script>
-	<!-- duoshuo.com javascript include code end -->
-	{% endif %}
-	{% if site.disqus_url %}
-	<script>
-		var disqus_config = function () {
-			this.page.url = "{{ site.disqus_url }}"; 
-			this.page.identifier = "{{ site.disqus_shortname }}"; 
-		};
-		(function() {
-			var d = document, s = d.createElement('script');
-			s.src = '//{{ site.disqus_shortname }}.disqus.com/embed.js';
-			s.setAttribute('data-timestamp', +new Date());
-			(d.head || d.body).appendChild(s);
-		})();
-	</script>
-	{% endif %}
-
 	<!-- open in new window -->
   <script type="text/javascript">
     function addBlankTargetForLinks () {
