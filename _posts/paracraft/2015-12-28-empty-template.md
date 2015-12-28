@@ -1,8 +1,9 @@
 ---
 layout: post
 comments: true
+categories: paracraft
 ---
 
-## title 
+## Empty diary template
 
 Empty post template

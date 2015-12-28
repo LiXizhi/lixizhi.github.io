@@ -1,9 +1,9 @@
 ---
 layout: post
 comments: true
-categories: diary
+categories: npl
 ---
 
-## Empty diary template
+## Empty npl tutorial template
 
 Empty post template
