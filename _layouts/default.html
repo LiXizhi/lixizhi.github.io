@@ -8,7 +8,6 @@
 
     {% include header.html %}
 
-
     <div id="main" class="container main">
       {{ content }}
     </div>
@@ -24,17 +23,6 @@
     {% include footer.html %}
 
     {% include newpost.html %}
-    
-	<!-- open in new window -->
-  <script type="text/javascript">
-    function addBlankTargetForLinks () {
-      $('a[href^="http"]').each(function(){
-          $(this).attr('target', '_blank');
-      });
-    }
-    $(document).bind('DOMNodeInserted', function(event) {
-      addBlankTargetForLinks();
-    });
-  </script>
+  
   </body>
 </html>
