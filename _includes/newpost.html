@@ -15,7 +15,7 @@
         'text'
         ].join('\n');
       urlNewPage += "&value=" + encodeURIComponent(defaultText);   
-      $('.newpost a').each(function(){
+      $('a.newpost').each(function(){
           $(this).attr('href', urlNewPage);
       });
     });
