@@ -1,0 +1,22 @@
+<script type="text/javascript">
+    function CreateNewPostLinks() {
+      var currentdate = new Date();
+      var urlNewPage = "https://github.com/{{ site.github_username }}/{{ site.github_username }}.github.io/new/master?filename=_posts/" 
+        + currentdate.getFullYear() + "-" + currentdate.getMonth() + "-" + currentdate.getDay() + "enter-your-title.md";
+        
+      var defaultText =  [
+        '---',
+        'layout: post',
+        'comments: true',
+        'categories: diary',
+        '---',
+        '## Title',
+        'text'
+        ].join('\n');
+      urlNewPage += "&value=" + encodeURIComponent(defaultText);   
+      $('.newpost a').each(function(){
+          $(this).attr('href', urlNewPage);
+      });
+    }
+    CreateNewPostLinks();
+</script>
