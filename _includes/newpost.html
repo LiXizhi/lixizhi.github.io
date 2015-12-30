@@ -3,7 +3,7 @@
       // CreateNewPostLinks
       var currentdate = new Date();
       var urlNewPage = "https://github.com/{{ site.github_username }}/{{ site.github_username }}.github.io/new/master?filename=_posts/" 
-        + currentdate.getFullYear() + "-" + currentdate.getMonth() + "-" + currentdate.getDay() + "-enter-your-title.md";
+        + currentdate.getFullYear() + "-" + (currentdate.getMonth()+1) + "-" + currentdate.getDate() + "-enter-your-title.md";
         
       var defaultText =  [
         '---',
