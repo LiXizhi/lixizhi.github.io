@@ -38,7 +38,7 @@ Click view source at the bottom of the page
 * Embedding code
 {% highlight lua %}
 local function main()
-	print("hello world")
+	print("hello world everyone")
 end
 {% endhighlight %}
 
