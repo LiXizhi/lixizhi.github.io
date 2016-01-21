@@ -5,7 +5,7 @@
         if (title!=null){
             title = title.replace(" ", "-");
             var currentdate = new Date();
-            var urlNewPage = "https://github.com/{{ site.github_username }}/{{ site.github_username }}.github.io/new/master?filename=_posts/" 
+            var urlNewPage = "{{ site.newsourceroot }}?filename=_posts/" 
                 + currentdate.getFullYear() + "-" + (currentdate.getMonth()+1) + "-" + currentdate.getDate() + "-" + title + ".md";
                 
             var defaultText =  [
