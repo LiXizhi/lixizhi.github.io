@@ -5,14 +5,11 @@ date:   2018-12-25 15:14:54
 categories: prometheus
 comments: true
 ---
-
 ### What is Prometheus?
 메트릭 정보를 수집하여 시스템을 모니터링하고 Alerting을 지원하는 오픈소스
 
-
 ### Architecture
 ![prometheus-architecture-01](https://user-images.githubusercontent.com/19832483/50424631-8cba6880-08aa-11e9-87b9-d7572088e7d9.png)
-
 
 ### Concept
 - Data Model
