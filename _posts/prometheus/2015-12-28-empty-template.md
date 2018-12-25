@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-categories: npl
+categories: prometheus
 ---
 
 ## Empty npl tutorial template
