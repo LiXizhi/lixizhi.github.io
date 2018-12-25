@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 comments: true
-permalink: /projects/
+# permalink: /projects/
 ---
 
 * content

@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Zipkin's Architecture"
-date:   2015-02-10 15:14:54
-categories: zipkin
+title:  "Prometheus' Architecture"
+date:   2018-12-25 15:14:54
+categories: prometheus
 comments: true
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
