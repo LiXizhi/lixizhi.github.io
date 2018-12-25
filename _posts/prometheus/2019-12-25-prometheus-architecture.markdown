@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "모니터링 시스템 - Prometheus #1 - 아키텍쳐와 개념"
+title:  "Prometheus #1 - 아키텍쳐와 개념"
 date:   2018-12-25 15:14:54
 categories: prometheus
 comments: true
