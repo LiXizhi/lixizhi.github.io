@@ -1,16 +1,18 @@
 ---
 layout: post
-title:  "모니터링 시스템 - Prometheus #1 - 개념과 아키텍쳐"
+title:  "모니터링 시스템 - Prometheus #1 - 아키텍쳐와 개념"
 date:   2018-12-25 15:14:54
 categories: prometheus
 comments: true
 ---
 
-##### What is Prometheus?
-###### 메트릭 정보를 수집하여 시스템을 모니터링하고 Alerting을 지원하는 오픈소스
-##### Architecture
+## What is Prometheus?
+### 메트릭 정보를 수집하여 시스템을 모니터링하고 Alerting을 지원하는 오픈소스
+
+## Architecture
 ![prometheus-architecture-01](https://user-images.githubusercontent.com/19832483/50424631-8cba6880-08aa-11e9-87b9-d7572088e7d9.png)
-##### Concept
+
+## Concept
 - Data Model
 	- Metric name
 		- 측정되는 시스템의 기능
@@ -63,7 +65,7 @@ comments: true
 		- Cross-service Ferderation
 - Exporters
 	- 모니터링 대상의 Metric 정보를 수집
-	- Exporter Http EndPoint를 통해 Prometheus에서 Metric을 수집
+	- Exporter Http EndPoint를 통해 Prometheus에서 Metric을 수집 (Pull 방식)
 	- 서드 파티 시스템에서 Prometheus metrics를 export하기 위해 사용
 - AlertManager
 	- Prometheus Server와 같은 클라이언트 어플리케이션에 의해 보내진 Alert을 처리
