@@ -29,3 +29,17 @@ Effective Java를 공부하는 도중에 블로그 개설을 해서 챕터 앞�
 		// Collections.emptyList()는 불변 리스트 객체를 리턴한다.
 		return cheesesInStock.isEmpty() ? Collections.emptyList() : new ArrayList<>(cheessesInStock);
 	}
+
+### Item 55. 옵셔널 반환은 신중히 하라
+결과가 없을 수 있으며, 클라이언트가 이 상황을 특별하게 처리해야 한다면 Optional<T>를 반환하라. 아래는 클라이언트에서 Optional의 활용 예제이다.
+
+	// 옵셔널 활용1 - null일 경우, 기본값을 정해둘 수 있다.
+	String lastWordInLexicon = max(words).orElse("단어 없음..");
+
+	// 옵셔널 활용2 - 원하는 예외를 던질 수 있다.
+	Toy myToy = max(toys).orElseThrow(ToysException::new);
+
+컬렉션, 스트림, 배열, 옵셔널 같은 컨테이너 타입은 옵셔널로 감싸면 안된다. 또한 컬렉션의 키, 값, 원소나 배열의 원소로 사용하는게 적절한 상황은 거의 없다.
+Optional 자체도 초기화해야하는 객체이므로 성능이 중요한 상황에서는 적절하지 않을수 있다.
+
+### Item 56. 공개된 API 요소에는 항상 문서화 주석을 작성하라
