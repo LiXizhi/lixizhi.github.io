@@ -10,7 +10,7 @@ Effective Java를 공부하는 도중에 블로그 개설을 해서 챕터 앞�
 ### Item 53. 가변인수는 신중히 사용하라
 가변인수는 인수 개수가 정해지지 않았을 때 아주 유용하다.
 그러나 가변인수 메서드는 호출될때 마다 배열을 새로 하나 할당하고 초기화하기 때문에, 성능에 민감한 상황인 경우 다음과 같은 패턴을 주로 사용한다.
-```
+```java
 	public void foo() {}
     public void foo(int a1) {}
     public void foo(int a1, int a2) {}
@@ -23,7 +23,7 @@ Effective Java를 공부하는 도중에 블로그 개설을 해서 챕터 앞�
 컬렉션이나 배열 반환시에 size() 또는 length가 0이면 null을 반환하지 말아라. null을 반환하게 된다면 null에 대한 방어코드를 클라이언트에서 처리해야한다.
 이를 방지하기 위해서 null이 아닌, 빈 컬렉션이나 빈 배열을 반환하자.
 혹시나 성능이 우려된다면(대부분의 경우 그렇지 않겠지만), 불변 객체를 미리 할당하고, 이를 재사용하자.
-```
+```java
 	public List<Cheese> getCheeses() {
 
 		// Collections.emptyList()는 불변 리스트 객체를 리턴한다.
@@ -32,7 +32,7 @@ Effective Java를 공부하는 도중에 블로그 개설을 해서 챕터 앞�
  ```
 ### Item 55. 옵셔널 반환은 신중히 하라
 결과가 없을 수 있으며, 클라이언트가 이 상황을 특별하게 처리해야 한다면 Optional<T>를 반환하라. 아래는 클라이언트에서 Optional의 활용 예제이다.
-```
+```java
 	// 옵셔널 활용1 - null일 경우, 기본값을 정해둘 수 있다.
 	String lastWordInLexicon = max(words).orElse("단어 없음..");
 
@@ -58,7 +58,7 @@ API를 문서화하려면 공개된 모든 클래스, 인터페이스, 메서드
 
 다음은 위의 규칙을 모두 반영한 문서화 주석의 예이다.
 
-```
+```java
 	/**
      * Returns the element at the specified position in this list.
      *
@@ -85,7 +85,7 @@ API를 문서화하려면 공개된 모든 클래스, 인터페이스, 메서드
 
 다음은 `@implSpec`을 반영한 문서화 주석의 예이다.
 
-```
+```java
     /**
      * Returns true if this collection is empty.
      *
