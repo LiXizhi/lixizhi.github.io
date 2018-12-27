@@ -86,7 +86,7 @@ API를 문서화하려면 공개된 모든 클래스, 인터페이스, 메서드
 다음은 `@implSpec`을 반영한 문서화 주석의 예이다.
 
 ```java
-    /**
+	/**
      * Returns true if this collection is empty.
      *
      * @implSpec This implementation returns {@code this.size() == 0}.
@@ -103,3 +103,66 @@ API 설명에 <,>,& 등의 HTML 메타문자를 포함시키려면 `{@literal}` 
 문서화 주석의 첫 번째 문장은 해당 요소의 요약 설명으로 간주된다.
 메서드와 생성자의 요약 설명은 해당 메서드와 생성자의 동작을 설명하는 주어가 없는 동사구여야 한다.
 한편 클래스, 인터페이스, 필드의 요약 설명은 대상을 설명하는 명사절이여야 한다.
+
+제네릭 타입이나 제네릭 메서드를 문서화할 때는 모든 타입 매개변수에 주석을 달아야 한다.
+다음은 자바 Map의 예제이다.
+
+```java
+	/**
+     * An object that maps keys to values.  A map cannot contain duplicate keys;
+ 	 * each key can map to at most one value. 
+	 *
+	 * @param <K> the type of keys maintained by this map
+ 	 * @param <V> the type of mapped values
+     */
+    public interface Map<K,V> {
+		...
+	}
+```
+
+열거 타입을 문서화할 때는 상수들에도 주석을 달아야 한다.
+
+```java
+    /**
+     * An instrument section of a symphony orchestra.
+     */
+    public enum OrchestraSection {
+        /** Woodwinds, such as flute, clarinet, and oboe. */
+        WOODWIND,
+
+        /** Brass instruments, such as french horn and trumpet. */
+        BRASS,
+
+        /** Percussion instruments, such as timpani and cymbals. */
+        PERCUSSION,
+
+        /** Stringed instruments, such as violin and cello. */
+        STRING;
+    }
+```
+
+또한, 어노테이션 타입을 문서화할 때는 멤버들에도 모두 주석을 달아야 한다. 어노테이션 타입의 요약 설명은 프로그램 요소에 이 어노테이션을 단다는 것이 어떤 의미를 설명하는 동사구로 쓴다.
+
+```java
+    /**
+     * Indicates that the annotated method is a test method that
+     * must throw the designated exception to pass.
+     */
+    @Retention(RetentionPolicy.RUNTIME)
+    @Target(ElementType.METHOD)
+    public @interface ExceptionTest {
+        /**
+         * The exception that the annotated test method must throw
+         * in order to pass. (The test is permitted to throw any
+         * subtype of the type described by this class object.)
+         */
+        Class<? extends Throwable> value();
+    }
+```
+
+패키지를 설명하는 문서화 주석은 `package-info.java` 파일에 작성한다. 모듈 시스템을 사용한다면 모듈 관련 설명은 `module-info.java` 파일에 작성하면 된다.
+
+클래스 혹은 정적 메서드가 스레드 안전하든 그렇지 않든, 스레드 안전 수준을 반드시 API 설명에 포함해야 한다.
+또한 직렬화할 수 있는 클래스라면 직렬화 형태도 API 설명에 기술해야 한다.
+
+`{@inheritDoc}` 태그를 사용해 상위 타입의 문서화 주석 일부를 상속할 수 있다.
