@@ -12,7 +12,7 @@ Effective Java를 공부하는 도중에 블로그 개설을 해서 챕터 앞�
 그러나 가변인수 메서드는 호출될때 마다 배열을 새로 하나 할당하고 초기화하기 때문에, 성능에 민감한 상황인 경우 다음과 같은 패턴을 주로 사용한다.
 ```java
 	public void foo() {}
-    public void foo(int a1) {}
+	public void foo(int a1) {}
     public void foo(int a1, int a2) {}
     public void foo(int a1, int a2, int a3) {}
     public void foo(int a1, int a2, int a3, int... rest) {}
@@ -29,7 +29,7 @@ Effective Java를 공부하는 도중에 블로그 개설을 해서 챕터 앞�
 		// Collections.emptyList()는 불변 리스트 객체를 리턴한다.
 		return cheesesInStock.isEmpty() ? Collections.emptyList() : new ArrayList<>(cheessesInStock);
 	}
- ```
+```
 ### Item 55. 옵셔널 반환은 신중히 하라
 결과가 없을 수 있으며, 클라이언트가 이 상황을 특별하게 처리해야 한다면 Optional<T>를 반환하라. 아래는 클라이언트에서 Optional의 활용 예제이다.
 ```java
