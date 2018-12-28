@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "서비스 수준 목표 설정 - SLI, SLO"
+title:  "SRE - 서비스 수준 목표 설정(SLI, SLO 설정)"
 date:   2018-12-28 11:07:00
 categories: SRE
 comments: true
