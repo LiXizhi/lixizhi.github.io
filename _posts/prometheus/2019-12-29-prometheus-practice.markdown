@@ -49,6 +49,7 @@ management.metrics.export.prometheus.enabled=true
 여기서는 `설치 파일을 받아서 실행하는 방법`과 `docker를 이용해서 실행하는 방법` 두 가지를 소개하겠다.  
 
 1. 설치 파일을 받아서 실행
+
 [링크][Prometheus-Install]에서 각 OS에 맞는 파일을 받는다. 필자는 Mac OS이므로 `prometheus-{version}.darwin-amd64.tar.gz`를 다운로드하였다. 파일을 원하는 위치에 받고, 압축을 푼다.
 압축을 풀고 해당 디렉토리 안을 보면 `prometheus.yml`이란 설정 파일이 있다. 해당 파일의 내용을 다음과 같이 수정하자.
 ```yaml
@@ -72,6 +73,7 @@ $ nohup ./prometheus &
 ![prometheus-execute-04](https://user-images.githubusercontent.com/19832483/50539351-8980ee80-0bc2-11e9-99d3-76648e5dd606.png)
 
 2. Docker를 이용해서 실행
+
 필자의 경우 Docker를 이용해서 실행하는 방법은 생각대로 잘 되지 않았다. Prometheus Container에서 메트릭을 수집하기 위해서는 Host의 Application 쪽으로 Http 요청을 보내야 하는데, Docker의 특성상 기본적으로 Container에서 Host로 접근이 불가능하다. 접근을 가능하게 하려면 Mac OS 기준으로 Docker Container에서 도메인을 `host.docker.internal`로 요청을 해야한다고 [Docker 문서][Docker-MacOS-Networking]에 명시되어 있다. 필자는 이 방법을 사용해 봤지만 Prometheus Container에서 Host Application으로 요청시 EOF 에러가 발생하는데, 이 원인에 대해서는 나중에 분석할 예정이다.(몇 시간동안 삽질을 해봤지만 소득이 없었다..) 필자는 Mac OS에서 발생하는 문제라고 보고 있다. 혹시나 이런 문제를 해결하신 분이 이 글을 본다면 어떻게 해결했는지 댓글을 남겨주시면 좋을것 같다.
 
 Container를 실행하기에 앞서 Prometheus의 설정파일을 쉽게 관리하기 위해 Prometheus Container안에 있는 prometheus.yml을 Host의 prometheus.yml과 마운트 시킬것이다. Host에서 설정파일을 관리할 디렉토리륾 만들고 다음과 같이 prometheus.yml을 작성한다.
