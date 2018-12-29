@@ -17,10 +17,10 @@ comments: true
 3. 병렬 반복 - 여러 컬렉션을 병렬로 순회해야 한다면 각각의 반복자 또는 인덱스 변수를 사용해 엄격하고 명시적으로 제어해야 한다.
 
 단, for-each문을 사용하기 위해서는 Iterable 인터페이스를 구현한 객체여야한다.
-```
-	public interface Iterable<E> {
-		// 이 객체의 원소들을 순회하는 반복자를 반환한다.
-		Iterator<E> iterator();
-	}
+```java
+public interface Iterable<E> {
+	// 이 객체의 원소들을 순회하는 반복자를 반환한다.
+	Iterator<E> iterator();
+}
 ```
 
