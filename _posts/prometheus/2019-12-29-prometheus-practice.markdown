@@ -90,7 +90,7 @@ scrape_configs:
 이제 위의 작성한 파일을 Container와 공유하면서 Prometheus를 실행할수 있도록 다음의 명령어를 수행한다.
 
 ```console
-docker run -p 9090:9090 -v {생성한 디렉토리}/prometheus.yml:/etc/prometheus/prometheus.yml --name prometheus -d prom/prometheus --config.file=/etc/prometheus/prometheus.yml
+$ docker run -p 9090:9090 -v {생성한 디렉토리}/prometheus.yml:/etc/prometheus/prometheus.yml --name prometheus -d prom/prometheus --config.file=/etc/prometheus/prometheus.yml
 ```
 
 `http://localhost:9090` 요청시 웹페이지가 보이면 Prometheus Server가 성공적으로 실행된 것이다. 필자는 위에서 말했듯이 Prometheus Container는 잘 동작하지만, 외부의 Metric 수집이 되지 않는다.
