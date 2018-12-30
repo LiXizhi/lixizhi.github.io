@@ -105,7 +105,7 @@ $ nohup ./prometheus &
 ```
 `http://localhost:9090` 요청시 아래와 같이 웹 페이지가 보이면 Prometheus Server가 성공적으로 실행된 것이다.
 
-![prometheus-execute-04](https://user-images.githubusercontent.com/19832483/50539350-884fc180-0bc2-11e9-8594-1477f6e28ba2.png){: width="100%" height="100%"}
+![prometheus-execute-04](https://user-images.githubusercontent.com/19832483/50539350-884fc180-0bc2-11e9-8594-1477f6e28ba2.png){: width="100" height="100"}
 
 아래의 그림처럼 웹 페이지에서 수집된 메트릭 항목을 하나 선택후에 `Graph` 탭을 누르고, `Execute` 버튼을 누르면 메트릭에 해당하는 그래프가 보여질 것이다.
 
