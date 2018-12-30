@@ -11,6 +11,7 @@ comments: true
 SpringBoot 2.0이상부터는 `Micrometer`라는 메트릭 엔진을 지원한다. 이 글에서는 `Micrometer`를 사용하여 모니터링 메트릭을 생성할 것이다. `Micrometer`에 대한 자세한 설명은 다음의 [링크][Micrometer-Describe]를 참고하기 바란다. 그리고 `Spring Actuator`로 메트릭들을 Prometheus가 가져갈(Pull)수 있도록 Http EndPoint를 노출시킬 것이다. 
 
 `pom.xml`에 다음과 같이 dependency를 추가한다.
+
 ```java
 <!-- 메트릭을 Endpoint로 노출 -->
 <dependency>
@@ -30,6 +31,7 @@ SpringBoot 2.0이상부터는 `Micrometer`라는 메트릭 엔진을 지원한�
 ```
 
 `application.properties`에 다음의 설정을 추가한다.
+
 ```java
 management.endpoint.metrics.enabled=true
 management.endpoints.web.exposure.include=*
@@ -38,9 +40,11 @@ management.metrics.export.prometheus.enabled=true
 ```
 
 이제 Application을 실행하고 `http://localhost:8080/actuator`로 아래와 같이 Prometheus 메트릭 노출 Endpoint가 존재하는지 확인한다.
+
 ![prometheus-execute-01](https://user-images.githubusercontent.com/19832483/50539347-8423a400-0bc2-11e9-8657-02583d7c4237.png)
 
 노출된 Endpoint Link인 `http://localhost:8080/actuator/prometheus`로 아래와 같이 Prometheus가 수집할 Metric들이 노출되는지 확인한다.
+
 ![prometheus-execute-02](https://user-images.githubusercontent.com/19832483/50539349-8685fe00-0bc2-11e9-96f8-bafbc3918496.png)
 
 위의 설정만으로도 `Micrometer`와 `Actuator`가 기본적인 메트릭을 노출시키지만, 실 서비스에서는 주로 `Custom Metric`을 측정하여 모니터링 하기때문에 이를 간단하게 작성해보자. 코드는 아래와 같다.
@@ -100,9 +104,11 @@ scrape_configs:
 $ nohup ./prometheus &
 ```
 `http://localhost:9090` 요청시 아래와 같이 웹 페이지가 보이면 Prometheus Server가 성공적으로 실행된 것이다.
+
 ![prometheus-execute-04](https://user-images.githubusercontent.com/19832483/50539350-884fc180-0bc2-11e9-8594-1477f6e28ba2.png)
 
 아래의 그림처럼 웹 페이지에서 수집된 메트릭 항목을 하나 선택후에 `Graph` 탭을 누르고, `Execute` 버튼을 누르면 메트릭에 해당하는 그래프가 보여질 것이다.
+
 ![prometheus-execute-05](https://user-images.githubusercontent.com/19832483/50539351-8980ee80-0bc2-11e9-99d3-76648e5dd606.png)
 
 #### 2. Docker를 이용해서 실행
@@ -135,14 +141,17 @@ Prometheus의 웹 페이지에서 쿼리를 수행하여 우리가 원하는 메
 필자는 `Docker`를 이용해서 `Grafana`를 설치하였다. 이 포스트에서는 `Grafana`가 이미 설치되었다고 가정하고 다음의 과정을 진행하겠다.
 
 `Grafana`에 우리가 사용하는 Prometheus `Data Source`를 추가하기 위해 `Configuration` -> `Data Source` -> `Add DataSource` -> `Prometheus`순으로 UI를 클릭한다. 그리고 아래와 같이 설정한다.
+
 ![prometheus-execute-06](https://user-images.githubusercontent.com/19832483/50545454-6e13f300-0c57-11e9-9226-37c8f45ec343.png)
 
 위 사진의 `HTTP`항목을 보면 필자는 요청 도메인을 `host.docker.internal`로 설정하였는데, 2-1번에서 설명했던 이유로 해당 도메인을 사용하였다.(다행히도 grafana는 잘 동작한다.)
 
 이제 위에서 추가한 Data Source를 이용해서, 현재 측정하고 있는 메트릭인 `api_call_count_total`를 그래프로 시각화해보자. 아래와 같이 설정한다.
+
 ![prometheus-execute-07](https://user-images.githubusercontent.com/19832483/50545456-8b48c180-0c57-11e9-8815-7dd43eae9b7b.png)
 
 그럼 아래의 그림처럼 시각화된 그래프가 보일것이다.
+
 ![prometheus-execute-08](https://user-images.githubusercontent.com/19832483/50545457-8edc4880-0c57-11e9-8507-034bd4bde07a.png)
 
 우리는 위 과정을 통해 `Spring Boot Application`을 작성해 메트릭을 노출시키고, `Prometheus`를 설치 및 설정하고, `Grafana`로 시각화하는 작업까지 모두 마쳤다. 실제로는 소개하지 않은 더 많은 유용한 기능들이 있다. 필요한 기능이 있으면 문서를 통해 찾아보면 될 것이다. 이 글이 Prometheus를 접해보지 않은 분들께 많은 도움이 되길 바란다.
