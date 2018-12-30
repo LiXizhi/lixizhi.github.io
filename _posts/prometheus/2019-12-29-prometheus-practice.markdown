@@ -74,7 +74,7 @@ public class PrometheusDemoApplication {
 위의 코드를 보면 Spring에서 자동 설정해준 `MeterRegistry`를 Bean으로 주입받고, 원하는 `Counter`를 만들어낸다. `Counter`안의 문자열 `api.call.count`이 메트릭 이름이 된다. 이 외에도 많은 종류의 메트릭과 태그를 작성할수 있다.
 
 Spring Boot Application을 재실행하고, `http://localhost:8080/actuator/prometheus` 요청 후 응답으로 아래의 사진과 같이 `api_call_count_total` 메트릭이 나타나는지 확인한다.
-![prometheus-execute-02](https://user-images.githubusercontent.com/19832483/50545449-4fadf780-0c57-11e9-88a7-a7fb22eb9a53.png)
+![prometheus-execute-03](https://user-images.githubusercontent.com/19832483/50545449-4fadf780-0c57-11e9-88a7-a7fb22eb9a53.png)
 
 위의 과정을 모두 마쳤다면, Spring Boot Application에서 Metric을 Endpoint로 노출시키는 작업은 끝난것이다.
 
@@ -99,10 +99,10 @@ scrape_configs:
 $ nohup ./prometheus &
 ```
 `http://localhost:9090` 요청시 아래와 같이 웹 페이지가 보이면 Prometheus Server가 성공적으로 실행된 것이다.
-![prometheus-execute-03](https://user-images.githubusercontent.com/19832483/50539350-884fc180-0bc2-11e9-8594-1477f6e28ba2.png)
+![prometheus-execute-04](https://user-images.githubusercontent.com/19832483/50539350-884fc180-0bc2-11e9-8594-1477f6e28ba2.png)
 
 아래의 그림처럼 웹 페이지에서 수집된 메트릭 항목을 하나 선택후에 `Graph` 탭을 누르고, `Execute` 버튼을 누르면 메트릭에 해당하는 그래프가 보여질 것이다.
-![prometheus-execute-04](https://user-images.githubusercontent.com/19832483/50539351-8980ee80-0bc2-11e9-99d3-76648e5dd606.png)
+![prometheus-execute-05](https://user-images.githubusercontent.com/19832483/50539351-8980ee80-0bc2-11e9-99d3-76648e5dd606.png)
 
 #### 2. Docker를 이용해서 실행
 필자의 경우 Docker를 이용해서 실행하는 방법은 생각대로 잘 되지 않았다. Prometheus Container에서 메트릭을 수집하기 위해서는 Host의 Application 쪽으로 Http 요청을 보내야 하는데, Docker의 특성상 기본적으로 Container에서 Host로 접근이 불가능하다. 접근을 가능하게 하려면 Mac OS 기준으로 Docker Container에서 도메인을 `host.docker.internal`로 요청을 해야한다고 [Docker 문서][Docker-MacOS-Networking]에 명시되어 있다. 필자는 이 방법을 사용해 봤지만 Prometheus Container에서 Host Application으로 요청시 EOF 에러가 발생하는데, 이 원인에 대해서는 나중에 분석할 예정이다.(몇 시간동안 삽질을 해봤지만 소득이 없었다..) 필자는 Mac OS에서 발생하는 문제라고 보고 있다. 혹시나 이런 문제를 해결하신 분이 이 글을 본다면 어떻게 해결했는지 댓글을 남겨주시면 좋을것 같다.
@@ -133,19 +133,20 @@ Prometheus의 웹 페이지에서 쿼리를 수행하여 우리가 원하는 메
 
 필자는 `Docker`를 이용해서 `Grafana`를 설치하였다. 이 포스트에서는 `Grafana`가 이미 설치되었다고 가정하고 다음의 과정을 진행하겠다.
 
-`Grafana`에 우리가 사용하는 Prometheus `Data Source`를 추가하기 위해 `Configuration` -> `Data Source` -> `Add DataSource` -> `Prometheus`를 클릭한다. 그리고 아래와 같이 설정한다.
-![prometheus-execute-05](https://user-images.githubusercontent.com/19832483/50545454-6e13f300-0c57-11e9-9226-37c8f45ec343.png">
-g)
+`Grafana`에 우리가 사용하는 Prometheus `Data Source`를 추가하기 위해 `Configuration` -> `Data Source` -> `Add DataSource` -> `Prometheus`순으로 UI를 클릭한다. 그리고 아래와 같이 설정한다.
+![prometheus-execute-06](https://user-images.githubusercontent.com/19832483/50545454-6e13f300-0c57-11e9-9226-37c8f45ec343.png)
 
-위 사진의 `HTTP`항목을 보면 필자는 `host.docker.internal`로 설정하였는데, 2-1번에서 설명했던 이유로 해당 도메인을 사용하였다.(다행히도 grafana는 잘 동작한다.)
+위 사진의 `HTTP`항목을 보면 필자는 요청 도메인을 `host.docker.internal`로 설정하였는데, 2-1번에서 설명했던 이유로 해당 도메인을 사용하였다.(다행히도 grafana는 잘 동작한다.)
 
 이제 위에서 추가한 Data Source를 이용해서, 현재 측정하고 있는 메트릭인 `api_call_count_total`를 그래프로 시각화해보자. 아래와 같이 설정한다.
-![prometheus-execute-05](https://user-images.githubusercontent.com/19832483/50545456-8b48c180-0c57-11e9-8815-7dd43eae9b7b.png)
+![prometheus-execute-07](https://user-images.githubusercontent.com/19832483/50545456-8b48c180-0c57-11e9-8815-7dd43eae9b7b.png)
 
 그럼 아래의 그림처럼 시각화된 그래프가 보일것이다.
-![prometheus-execute-05](https://user-images.githubusercontent.com/19832483/50545457-8edc4880-0c57-11e9-8507-034bd4bde07a.png)
+![prometheus-execute-08](https://user-images.githubusercontent.com/19832483/50545457-8edc4880-0c57-11e9-8507-034bd4bde07a.png)
 
-우리는 위 과정을 통해 `Spring Boot Application`을 작성해 메트릭을 노출시키고, `Prometheus`를 설치 및 설정하고, `Grafana`로 시각화하는 작업까지 모두 마쳤다. 실제로는 소개하지 않은 더 많은 유용한 기능들이 있다. 필요한 기능이 있으면 문서를 통해 찾아보면 될 것이다. 이 글이 Prometheus를 접해보지 않은 분들께 많은 도움이 되길 바란다. 이상 프스팅을 마치겠다.
+우리는 위 과정을 통해 `Spring Boot Application`을 작성해 메트릭을 노출시키고, `Prometheus`를 설치 및 설정하고, `Grafana`로 시각화하는 작업까지 모두 마쳤다. 실제로는 소개하지 않은 더 많은 유용한 기능들이 있다. 필요한 기능이 있으면 문서를 통해 찾아보면 될 것이다. 이 글이 Prometheus를 접해보지 않은 분들께 많은 도움이 되길 바란다.
+
+이상 프스팅을 마치겠다.
 
 [Micrometer-Describe]:https://dzone.com/articles/using-micrometer-with-spring-boot-2
 [Prometheus-Install]:https://prometheus.io/download/
