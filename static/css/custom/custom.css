@@ -1,0 +1,17 @@
+.u-mid-img {
+    width: 70%;
+    height: 70%;
+    vertical-align: middle;
+}
+
+.mid-img {
+    width: 50%;
+    height: 50%;
+    vertical-align: middle;
+}
+
+.small-img {
+    width: 30%;
+    height: 30%;
+    vertical-align: middle;
+}
