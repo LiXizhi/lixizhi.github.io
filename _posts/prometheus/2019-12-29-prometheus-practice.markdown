@@ -75,7 +75,7 @@ public class PrometheusDemoApplication {
 	}
 }
 ```
-위의 코드를 보면 Spring에서 자동 설정해준 `MeterRegistry`를 Bean으로 주입받고, 원하는 `Counter`를 만들어낸다. `Counter`안의 문자열 `api.call.count`이 메트릭 이름이 된다. 이 외에도 많은 종류의 메트릭과 태그를 작성할수 있다.
+위의 코드를 보면 Spring에서 자동 설정해준 `MeterRegistry`를 Bean으로 주입받고, 원하는 `Counter`를 만들어낸다. `Counter`안의 문자열 `api.call.count`이 변형되어 `api_call_count_total`가 메트릭 이름이 된다. 이 외에도 많은 종류의 메트릭과 태그를 작성할수 있다.
 
 Spring Boot Application을 재실행하고, `http://localhost:8080/actuator/prometheus` 요청 후 응답으로 아래의 사진과 같이 `api_call_count_total` 메트릭이 나타나는지 확인한다.
 
