@@ -5,7 +5,6 @@ date:   2018-12-29 15:14:54
 categories: prometheus
 comments: true
 ---
-
 * content
 {:toc}
 
@@ -13,7 +12,7 @@ comments: true
 <br>
 
 ### 1. Prometheus가 메트릭을 수집할수 있도록 Spring Boot Application 작성
-SpringBoot 2.0이상부터는 `Micrometer`라는 메트릭 엔진을 지원한다. 이 글에서는 `Micrometer`를 사용하여 모니터링 메트릭을 생성할 것이다. `Micrometer`에 대한 자세한 설명은 다음의 [링크][Micrometer-Describe]를 참고하기 바란다. 그리고 `Spring Actuator`로 메트릭들을 Prometheus가 가져갈(Pull)수 있도록 Http EndPoint를 노출시킬 것이다. 
+SpringBoot 2.0이상부터는 `Micrometer`라는 메트릭 엔진을 지원한다. 이 글에서는 `Micrometer`를 사용하여 모니터링 메트릭을 생성할 것이다. `Micrometer`에 대한 자세한 설명은 [링크][Micrometer-Describe]를 참고하기 바란다. 그리고 `Spring Actuator`로 메트릭들을 Prometheus가 가져갈(Pull)수 있도록 Http EndPoint를 노출시킬 것이다. 
 
 `pom.xml`에 다음과 같이 dependency를 추가한다.
 
