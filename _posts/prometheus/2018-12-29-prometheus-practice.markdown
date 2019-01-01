@@ -11,7 +11,7 @@ comments: true
 이번 글에서는 `Prometheus`를 이용해 `Spring Boot` 메트릭을 수집하고 `Grafana`로 시각화하는 실습을 포스팅할 것이다.
 <br>
 
-### 1. Prometheus가 메트릭을 수집할수 있도록 Spring Boot Application 작성
+### 1. Prometheus가 메트릭을 수집할 수 있도록 Spring Boot Application 작성
 SpringBoot 2.0이상부터는 `Micrometer`라는 메트릭 엔진을 지원한다. 이 글에서는 `Micrometer`를 사용하여 모니터링 메트릭을 생성할 것이다. `Micrometer`에 대한 자세한 설명은 [링크][Micrometer-Describe]를 참고하기 바란다. 그리고 `Spring Actuator`로 메트릭들을 Prometheus가 가져갈(Pull)수 있도록 Http EndPoint를 노출시킬 것이다. 
 
 `pom.xml`에 다음과 같이 dependency를 추가한다.
@@ -82,7 +82,7 @@ public class PrometheusDemoApplication {
 	}
 }
 ```
-위의 코드를 보면 Spring에서 자동 설정해준 `MeterRegistry`를 Bean으로 주입받고, `Counter` 메트릭을 만들어낸다. `Counter`안의 문자열 `api.call.count`이 변형되어 `api_call_count_total`가 메트릭 이름이 된다. `/test` HTTP API를 호출하면 해당 `Counter`는 증가한다. 이 외에도 많은 종류의 메트릭과 태그를 작성할수 있다.
+위의 코드를 보면 Spring에서 자동 설정해준 `MeterRegistry`를 Bean으로 주입받고, `Counter` 메트릭을 만들어낸다. `Counter`안의 문자열 `api.call.count`이 변형되어 `api_call_count_total`가 메트릭 이름이 된다. `/test` HTTP API를 호출하면 해당 `Counter`는 증가한다. 이 외에도 많은 종류의 메트릭과 태그를 작성할 수 있다.
 
 Spring Boot Application을 재실행하고, `http://localhost:8080/actuator/prometheus` 요청 후 응답으로 아래의 사진과 같이 `api_call_count_total` 메트릭이 나타나는지 확인한다.
 
@@ -143,7 +143,7 @@ scrape_configs:
 ```
 <br>
 
-이제 위의 작성한 파일을 Container와 공유하면서 Prometheus를 실행할수 있도록 다음의 명령어를 수행한다.
+이제 위의 작성한 파일을 Container와 공유하면서 Prometheus를 실행할 수 있도록 다음의 명령어를 수행한다.
 
 ```console
 $ docker run -p 9090:9090 -v {생성한 디렉토리}/prometheus.yml:/etc/prometheus/prometheus.yml --name prometheus -d prom/prometheus --config.file=/etc/prometheus/prometheus.yml
@@ -152,7 +152,7 @@ $ docker run -p 9090:9090 -v {생성한 디렉토리}/prometheus.yml:/etc/promet
 <br><br>
 
 ### 3. Prometheus가 수집한 데이터를 Grafana로 시각화하기
-Prometheus의 웹 페이지에서 쿼리를 수행하여 우리가 원하는 메트릭을 그래프로 시각화할수 있다. 하지만 매번 모니터링을 위해 수동으로 쿼리를 수행하는 것은 비효율적이고 시각화하는데 한계가 있기 때문에 보통 시각화 도구를 이용해서 모니터링할 메트릭 항목을 선정하여 시각화한다. 여기서는 `Grafana`를 이용해서 모니터링을 위해 메트릭들을 시각화하는 방법을 소개할 것이다.
+Prometheus의 웹 페이지에서 쿼리를 수행하여 우리가 원하는 메트릭을 그래프로 시각화할 수 있다. 하지만 매번 모니터링을 위해 수동으로 쿼리를 수행하는 것은 비효율적이고 시각화하는데 한계가 있기 때문에 보통 시각화 도구를 이용해서 모니터링할 메트릭 항목을 선정하여 시각화한다. 여기서는 `Grafana`를 이용해서 모니터링을 위해 메트릭들을 시각화하는 방법을 소개할 것이다.
 
 필자는 `Docker`를 이용해서 `Grafana`를 설치하였다. 이 포스트에서는 `Grafana`가 이미 설치되었다고 가정하고 다음의 과정을 진행하겠다.
 
