@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Prometheus #2 - Prometheus & Grafana를 이용한 Spring Boot 2.0 어플리케이션 모니터링"
+title:  "Prometheus #2 - Prometheus와 Grafana를 이용한 Spring Boot 2.0 어플리케이션 모니터링"
 date:   2018-12-29 15:14:54
 categories: prometheus
 comments: true
@@ -127,7 +127,7 @@ $ nohup ./prometheus &
 <br>
 <br>
 #### 2. Docker를 이용해서 실행
-필자의 경우 Docker를 이용해서 실행하는 방법은 생각대로 잘 되지 않았다. Prometheus Container에서 메트릭을 수집하기 위해서는 Host의 Application 쪽으로 Http 요청을 보내야 하는데, Docker의 특성상 기본적으로 Container에서 Host로 접근이 불가능하다. 접근을 가능하게 하려면 Mac OS 기준으로 Docker Container에서 도메인을 `host.docker.internal`로 요청을 해야한다고 [Docker 문서][Docker-MacOS-Networking]에 명시되어 있다. 필자는 이 방법을 사용해 봤지만 Prometheus Container에서 Host Application으로 요청시 EOF 에러가 발생하는데, 이 원인에 대해서는 나중에 분석할 예정이다.(몇 시간동안 삽질을 해봤지만 소득이 없었다..) 필자는 Mac OS에서 발생하는 문제라고 보고 있다. 혹시나 이런 문제를 해결하신 분이 이 글을 본다면 어떻게 해결했는지 댓글을 남겨주시면 좋을것 같다.
+필자의 경우 Docker를 이용해서 실행하는 방법은 생각대로 잘 되지 않았다. Prometheus Container에서 메트릭을 수집하기 위해서는 Host의 Application 쪽으로 Http 요청을 보내야 하는데, Docker의 특성상 기본적으로 Container에서 Host로 접근이 불가능하다. 접근을 가능하게 하려면 Mac OS 기준으로 Docker Container에서 도메인을 `host.docker.internal`로 요청을 해야한다고 [Docker 문서][Docker-MacOS-Networking]에 명시되어 있다. 필자는 이 방법을 사용해 봤지만 Prometheus Container에서 Host Application으로 요청시 EOF 에러가 발생하는데, 이 원인에 대해서는 나중에 분석할 예정이다.(몇 시간동안 삽질을 해봤지만 소득이 없었다..) 필자는 Prometheus Docker Image에서 발생하는 문제라고 보고 있다. 혹시나 이런 문제를 해결하신 분이 이 글을 본다면 어떻게 해결했는지 댓글을 남겨주시면 좋을것 같다.
 
 Container를 실행하기에 앞서 Prometheus의 설정파일을 쉽게 관리하기 위해 Prometheus Container안에 있는 prometheus.yml을 Host의 prometheus.yml과 마운트 시킬것이다. Host에서 설정파일을 관리할 디렉토리를 만들고 다음과 같이 prometheus.yml을 작성한다.
 
@@ -160,7 +160,7 @@ Prometheus의 웹 페이지에서 쿼리를 수행하여 우리가 원하는 메
 
 ![prometheus-execute-06](https://user-images.githubusercontent.com/19832483/50545454-6e13f300-0c57-11e9-9226-37c8f45ec343.png){: .u-mid-img}
 
-위 사진의 `HTTP`항목을 보면 필자는 요청 도메인을 `host.docker.internal`로 설정하였는데, 2-1번에서 설명했던 이유로 해당 도메인을 사용하였다.(다행히도 grafana는 잘 동작한다.)
+위 사진의 `HTTP`항목을 보면 필자는 요청 도메인을 `host.docker.internal`로 설정하였는데, [2-2](#2-docker를-이용해서-실행)에서 설명했던 이유로 해당 도메인을 사용하였다.(다행히도 grafana는 잘 동작한다.)
 
 이제 위에서 추가한 Data Source를 이용해서, 현재 측정하고 있는 메트릭인 `api_call_count_total`를 그래프로 시각화해보자. 아래와 같이 설정한다.
 

@@ -1,0 +1,420 @@
+Configuration file: /Users/badcandy/workspace/badcandy.github.io/_config.yml
+            Source: /Users/badcandy/workspace/badcandy.github.io
+       Destination: /Users/badcandy/workspace/badcandy.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.872 seconds.
+ Auto-regeneration: enabled for '/Users/badcandy/workspace/badcandy.github.io'
+      Regenerating: 1 file(s) changed at 2019-01-02 22:39:08
+                    _posts/prometheus/2018-12-29-prometheus-practice.markdown
+                    ...done in 0.311905 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2019-01-02 22:41:30
+                    _posts/prometheus/2018-12-29-prometheus-practice.markdown
+                    ...done in 0.303183 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2019-01-02 22:41:41
+                    _posts/prometheus/2018-12-29-prometheus-practice.markdown
+                    ...done in 0.293276 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2019-01-02 22:42:48
+                    _posts/prometheus/2018-12-29-prometheus-practice.markdown
+                    ...done in 0.285544 seconds.
+                    
+Configuration file: /Users/badcandy/workspace/badcandy.github.io/_config.yml
+            Source: /Users/badcandy/workspace/badcandy.github.io
+       Destination: /Users/badcandy/workspace/badcandy.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.61 seconds.
+ Auto-regeneration: enabled for '/Users/badcandy/workspace/badcandy.github.io'
+LiveReload address: http://127.0.0.1:35729
+    Server address: http://127.0.0.1:4000
+  Server running... press ctrl-c to stop.
+        LiveReload: Browser connected
+Configuration file: /Users/badcandy/workspace/badcandy.github.io/_config.yml
+            Source: /Users/badcandy/workspace/badcandy.github.io
+       Destination: /Users/badcandy/workspace/badcandy.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.653 seconds.
+ Auto-regeneration: enabled for '/Users/badcandy/workspace/badcandy.github.io'
+                    Halting auto-regeneration.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:10:46
+                    nohup.out
+                    ...done in 0.26047 seconds.
+                    
+Configuration file: /Users/badcandy/workspace/badcandy.github.io/_config.yml
+            Source: /Users/badcandy/workspace/badcandy.github.io
+       Destination: /Users/badcandy/workspace/badcandy.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.621 seconds.
+ Auto-regeneration: enabled for '/Users/badcandy/workspace/badcandy.github.io'
+      Regenerating: 1 file(s) changed at 2019-01-06 13:11:16
+                    _posts/stackdriver/2019-01-06-stackdriver-concep.markdown
+      Regenerating: 1 file(s) changed at 2019-01-06 13:11:16
+                    _posts/stackdriver/2019-01-06-stackdriver-concep.markdown
+                    ...done in 0.28973 seconds.
+                    
+                    ...done in 0.306108 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2019-01-06 13:11:16
+                    _posts/stackdriver/2019-01-06-stackdriver-concep.markdown
+      Regenerating: 1 file(s) changed at 2019-01-06 13:11:16
+                    _posts/stackdriver/2019-01-06-stackdriver-concep.markdown
+                    ...done in 0.303521 seconds.
+                    
+                    ...done in 0.303372 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2019-01-06 13:11:56      Regenerating: 1 file(s) changed at 2019-01-06 13:11:56
+
+                    _posts/stackdriver/2019-01-06-stackdriver-concep.markdown                    _posts/stackdriver/2019-01-06-stackdriver-concep.markdown
+
+                    ...done in 0.265825 seconds.
+                    
+                    ...done in 0.273227 seconds.
+                    
+Configuration file: /Users/badcandy/workspace/badcandy.github.io/_config.yml
+            Source: /Users/badcandy/workspace/badcandy.github.io
+       Destination: /Users/badcandy/workspace/badcandy.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.851 seconds.
+ Auto-regeneration: enabled for '/Users/badcandy/workspace/badcandy.github.io'
+    Server address: http://127.0.0.1:4000
+LiveReload address: http://127.0.0.1:35729
+  Server running... press ctrl-c to stop.
+        LiveReload: Browser connected
+      Regenerating: 1 file(s) changed at 2019-01-06 13:15:47
+                    _posts/stackdriver/2019-01-06-stackdriver-concep.markdown
+                    ...done in 0.334273 seconds.
+                    
+[2019-01-06 13:16:12] ERROR `/static/css/bootstrap.min.css.map' not found.
+[2019-01-06 13:16:24] ERROR `/static/css/bootstrap.min.css.map' not found.
+[2019-01-06 13:16:42] ERROR `/static/css/bootstrap.min.css.map' not found.
+[2019-01-06 13:16:44] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:17:50
+                    example/zipkin/2018-12-25-zipkin-architecture.markdown
+                    ...done in 0.291294 seconds.
+                    
+[2019-01-06 13:17:51] ERROR `/static/css/bootstrap.min.css.map' not found.
+[2019-01-06 13:18:18] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:19:34
+                    nohup.out
+                    ...done in 0.48898 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2019-01-06 13:19:34
+                    nohup.out
+[2019-01-06 13:19:35] ERROR `/static/css/bootstrap.min.css.map' not found.
+                    ...done in 0.412131 seconds.
+                    
+[2019-01-06 13:19:35] ERROR `/static/css/bootstrap.min.css.map' not found.
+[2019-01-06 13:19:48] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:24:09
+                    nohup.out
+                    ...done in 0.223185 seconds.
+                    
+[2019-01-06 13:24:09] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 2 file(s) changed at 2019-01-06 13:24:48
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    _posts/stackdriver/2019-01-06-stackdriver-concep.markdown
+                    ...done in 0.26889 seconds.
+                    
+[2019-01-06 13:24:48] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:25:02
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.273031 seconds.
+                    
+[2019-01-06 13:25:03] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:25:05
+                    nohup.out
+                    ...done in 0.254896 seconds.
+                    
+[2019-01-06 13:25:06] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:26:39
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.26075 seconds.
+                    
+[2019-01-06 13:26:39] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:28:30
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.2879 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2019-01-06 13:28:30
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+[2019-01-06 13:28:31] ERROR `/static/css/bootstrap.min.css.map' not found.
+                    ...done in 0.421017 seconds.
+                    
+[2019-01-06 13:28:31] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:29:45
+                    _posts/prometheus/2019-12-29-prometheus-practice.markdown
+                    ...done in 0.34536 seconds.
+                    
+[2019-01-06 13:29:46] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:29:55
+                    _posts/prometheus/2019-12-29-prometheus-practice.markdown
+                    ...done in 0.286317 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2019-01-06 13:29:56
+                    _posts/prometheus/2019-12-29-prometheus-practice.markdown
+[2019-01-06 13:29:56] ERROR `/static/css/bootstrap.min.css.map' not found.
+                    ...done in 0.371428 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2019-01-06 13:29:56
+                    _posts/prometheus/2019-12-29-prometheus-practice.markdown
+[2019-01-06 13:29:57] ERROR `/static/css/bootstrap.min.css.map' not found.
+                    ...done in 0.332738 seconds.
+                    
+[2019-01-06 13:29:57] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 2 file(s) changed at 2019-01-06 13:30:31
+                    _posts/prometheus/2018-12-2-prometheus-practice.markdown
+                    _posts/prometheus/2019-12-29-prometheus-practice.markdown
+                    ...done in 0.27243 seconds.
+                    
+[2019-01-06 13:30:31] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 2 file(s) changed at 2019-01-06 13:30:36
+                    _posts/prometheus/2018-12-02-prometheus-practice.markdown
+                    _posts/prometheus/2018-12-2-prometheus-practice.markdown
+                    ...done in 0.272616 seconds.
+                    
+[2019-01-06 13:30:36] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:30:45
+                    _posts/prometheus/2018-12-02-prometheus-practice.markdown
+                    ...done in 0.351318 seconds.
+                    
+[2019-01-06 13:30:46] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 2 file(s) changed at 2019-01-06 13:31:40
+                    _posts/stackdriver/2018-01-06-stackdriver-concept.markdown
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.337508 seconds.
+                    
+[2019-01-06 13:31:41] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:31:51
+                    _posts/stackdriver/2018-01-06-stackdriver-concept.markdown
+                    ...done in 0.328317 seconds.
+                    
+[2019-01-06 13:31:51] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 2 file(s) changed at 2019-01-06 13:32:40
+                    _posts/stackdriver/2019-01-01-stackdriver-concept.markdown
+                    _posts/stackdriver/2018-01-06-stackdriver-concept.markdown
+                    ...done in 0.354477 seconds.
+                    
+[2019-01-06 13:32:40] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:32:47
+                    _posts/stackdriver/2019-01-01-stackdriver-concept.markdown
+                    ...done in 0.308628 seconds.
+                    
+[2019-01-06 13:32:48] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:33:03
+                    _posts/stackdriver/2019-01-01-stackdriver-concept.markdown
+                    ...done in 0.300773 seconds.
+                    
+[2019-01-06 13:33:03] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 2 file(s) changed at 2019-01-06 13:33:26
+                    _posts/stackdriver/2019-01-02-stackdriver-concept.markdown
+                    _posts/stackdriver/2019-01-01-stackdriver-concept.markdown
+                    ...done in 0.348643 seconds.
+                    
+[2019-01-06 13:33:27] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:33:34
+                    _posts/stackdriver/2019-01-02-stackdriver-concept.markdown
+                    ...done in 0.30718 seconds.
+                    
+[2019-01-06 13:33:34] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:33:46
+                    _posts/stackdriver/2019-01-02-stackdriver-concept.markdown
+                    ...done in 0.304047 seconds.
+                    
+[2019-01-06 13:33:47] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:33:48
+                    _posts/stackdriver/2019-01-02-stackdriver-concept.markdown
+                    ...done in 0.317346 seconds.
+                    
+[2019-01-06 13:33:48] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:33:50
+                    _posts/stackdriver/2019-01-02-stackdriver-concept.markdown
+                    ...done in 0.332683 seconds.
+                    
+[2019-01-06 13:33:51] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:33:52
+                    _posts/stackdriver/2019-01-02-stackdriver-concept.markdown
+                    ...done in 0.3471 seconds.
+                    
+[2019-01-06 13:33:52] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 2 file(s) changed at 2019-01-06 13:34:05
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    _posts/stackdriver/2019-01-02-stackdriver-concept.markdown
+                    ...done in 0.30218 seconds.
+                    
+[2019-01-06 13:34:06] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:34:19
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.331649 seconds.
+                    
+[2019-01-06 13:34:19] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:34:24
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.328009 seconds.
+                    
+[2019-01-06 13:34:24] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:34:27
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.324333 seconds.
+                    
+[2019-01-06 13:34:28] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:34:28
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.358262 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2019-01-06 13:34:29
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+[2019-01-06 13:34:29] ERROR `/static/css/bootstrap.min.css.map' not found.
+                    ...done in 0.453149 seconds.
+                    
+[2019-01-06 13:34:29] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:34:54
+                    _posts/prometheus/2018-12-02-prometheus-practice.markdown
+                    ...done in 0.292613 seconds.
+                    
+[2019-01-06 13:34:54] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:36:35
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.278136 seconds.
+                    
+[2019-01-06 13:36:35] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:38:07
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.252871 seconds.
+                    
+[2019-01-06 13:38:08] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:38:57
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.265396 seconds.
+                    
+[2019-01-06 13:38:57] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:39:59
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.286483 seconds.
+                    
+[2019-01-06 13:40:00] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:40:16
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.240709 seconds.
+                    
+[2019-01-06 13:40:16] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:41:20
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.283797 seconds.
+                    
+[2019-01-06 13:41:21] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:41:29
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.265322 seconds.
+                    
+[2019-01-06 13:41:29] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:41:49
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.243043 seconds.
+                    
+[2019-01-06 13:41:50] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:42:02
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.273701 seconds.
+                    
+[2019-01-06 13:42:03] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 13:52:04
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.272277 seconds.
+                    
+[2019-01-06 13:52:05] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 14:00:16
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.281116 seconds.
+                    
+[2019-01-06 14:00:16] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 14:00:51
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.27758 seconds.
+                    
+[2019-01-06 14:00:52] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 14:02:32
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.249932 seconds.
+                    
+[2019-01-06 14:02:32] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 14:02:36
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.270397 seconds.
+                    
+[2019-01-06 14:02:36] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 14:03:37
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.244197 seconds.
+                    
+[2019-01-06 14:03:37] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 14:04:08
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.249003 seconds.
+                    
+[2019-01-06 14:04:09] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 14:11:19
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.28877 seconds.
+                    
+[2019-01-06 14:11:20] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 14:13:57
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.295254 seconds.
+                    
+[2019-01-06 14:13:57] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 14:15:19
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.268526 seconds.
+                    
+[2019-01-06 14:15:20] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 14:15:36
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.279658 seconds.
+                    
+[2019-01-06 14:15:37] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 14:15:54
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.275457 seconds.
+                    
+[2019-01-06 14:15:54] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 14:16:31
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.260634 seconds.
+                    
+[2019-01-06 14:16:31] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 14:17:16
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.265802 seconds.
+                    
+[2019-01-06 14:17:17] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 14:17:31
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.269755 seconds.
+                    
+[2019-01-06 14:17:32] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 14:17:51
+                    _posts/stackdriver/2019-01-06-stackdriver-concept.markdown
+                    ...done in 0.297849 seconds.
+                    
+[2019-01-06 14:17:52] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 15:16:21
+                    _posts/stackdriver/2020-01-06-stackdriver-concept.markdown
+                    ...done in 0.310141 seconds.
+                    
+[2019-01-06 15:16:21] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 15:16:38
+                    _posts/stackdriver/2020-01-06-stackdriver-concept.markdown
+                    ...done in 0.262003 seconds.
+                    
+[2019-01-06 15:16:39] ERROR `/static/css/bootstrap.min.css.map' not found.
+      Regenerating: 1 file(s) changed at 2019-01-06 15:19:30
+                    _posts/prometheus/2018-12-29-prometheus-practice.markdown
+                    ...done in 0.26527 seconds.
+                    
+[2019-01-06 15:19:31] ERROR `/static/css/bootstrap.min.css.map' not found.
