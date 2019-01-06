@@ -30,7 +30,7 @@ On-Prem 환경의 호스트 및 VM에서 Stackdriver Logging을 사용하기 위
 ![stackdriver-auth-02](https://user-images.githubusercontent.com/19832483/50733256-d02ba580-11cd-11e9-8ec9-2ec17186d603.png){: .u-mid-img}
 <br><br>
 
-새 서비스 계정을 만들고, 역할에는 `로그 구성 작성자`, `로그 작성자`, `로그 기록 관리자`, `로그 뷰어`를 선택한다. 단순히 Stackdriver에 log를 전송하는 VM에서는 로그 기록에 관한 권한만 필요하므로, 보안상 필요한 역할만 추가한다. 키 유형은 JSON을 선택한다.
+새 서비스 계정을 만들고, 역할에는 `로그 기록 관리자`를 선택한다. 단순히 Stackdriver에 log를 전송하는 VM에서는 로그 기록에 관한 권한만 필요하므로, 보안상 필요한 역할만 추가한다. 키 유형은 JSON을 선택한다.
 <br>
 ![stackdriver-auth-03](https://user-images.githubusercontent.com/19832483/50733257-d1f56900-11cd-11e9-840c-e8aa2e5b447e.png){: .u-mid-img}
 <br><br>
