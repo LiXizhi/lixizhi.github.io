@@ -9,7 +9,7 @@ comments: true
 {:toc}
 
 ### Stackdriver란 무엇인가?
-`Stackdriver`는 클라우드나 온프렘 환경의 애플리케이션에서 발생하는 로그, 메트릭, 이벤트를 GCP의 Stackdriver에서 수집하여 모니터링에 대한 다양한 서비스를 제공한다.
+`Stackdriver`는 클라우드나 On-Prem 환경의 애플리케이션에서 발생하는 분산 로그, 메트릭, 이벤트를 GCP의 Stackdriver에서 한 곳에 수집하여 모니터링에 대한 다양한 서비스를 제공한다.
 <br><br>
 
 ### Stackdriver의 장점
