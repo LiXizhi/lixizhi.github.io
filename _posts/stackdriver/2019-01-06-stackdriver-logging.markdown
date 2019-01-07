@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Stackdriver #2 - Stackdriver Logging을 이용한 분산 로그 수집 및 모니터링"
+title:  "Stackdriver #2 - Stackdriver Logging을 이용한 분산 로그 수집 및 애플리케이션 모니터링"
 date:   2019-01-06 00:14:54
 categories: stackdriver
 comments: true
