@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Stackdriver #1 - 스택드라이버란 무엇인가?"
+title:  "Stackdriver #1 - Stackdriver란 무엇인가?"
 date:   2019-01-06 00:14:54
 categories: stackdriver
 comments: true
