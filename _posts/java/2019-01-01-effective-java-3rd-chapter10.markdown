@@ -130,19 +130,19 @@ class HigherLevelException extends Exception {
 ### Item 75. 예외의 상세 메시지에 실패 관련 정보를 담아라
 예외가 발생했을 때, **실패 원인을 분석하기 위해 발생한 예외에 관여된 모든 매개변수와 필드 값을 실패 메세지(`toString()`)에 담아야 한다.** 이를 구현하기 위해서 아래 코드와 같이 필요한 정보를 예외 생성자에서 모두 받아 상태 메세지까지 미리 생성해놓는 방법을 사용할 수 있다.
 ```java
-	// 해당 예외의 디버깅에 유용한 정보인 lowerBound, upperBound, index를 예왼 생성자에서 받는다.
-    public IndexOutOfBoundsException(int lowerBound, int upperBound,
-                                     int index) {
-        // Generate a detail message that captures the failure
-        super(String.format(
-                "Lower bound: %d, Upper bound: %d, Index: %d",
-                lowerBound, upperBound, index));
+// 해당 예외의 디버깅에 유용한 정보인 lowerBound, upperBound, index를 예외 생성자에서 받는다.
+public IndexOutOfBoundsException(int lowerBound, int upperBound, int index) {
 
-        // Save failure information for programmatic access
-        this.lowerBound = lowerBound;
-        this.upperBound = upperBound;
-        this.index = index;
-    }
+	// 받은 인자를 String Message로 조합한다.
+	super(String.format(
+			"Lower bound: %d, Upper bound: %d, Index: %d",
+			lowerBound, upperBound, index));
+	
+	// 후에 예외 상황을 복구하기 위해 필요한 정보를 저장한다.
+	this.lowerBound = lowerBound;
+	this.upperBound = upperBound;
+	this.index = index;
+}
 ```
 또한 예외는 실패와 관련한 정보를 얻을 수 있는 접근자 메서드를 제공하는 것이 좋다. 접근자 메서드는 예외 상황을 복구하는데 유용할 수 있으므로 검사 예외에서 빛을 발한다.
 <br><br>
