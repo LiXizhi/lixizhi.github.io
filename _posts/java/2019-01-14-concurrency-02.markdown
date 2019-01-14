@@ -18,7 +18,7 @@ comments: true
 <br><br>
 `CPU`가 어떤 작업을 처리하기 위해 데이터가 필요할 때, `CPU`는 `RAM`의 일부분을 고속의 저장 징치인 `CPU Cache Memory`로 읽어들인다. 이 읽어들인 데이터로 명령을 수행하고 이 데이터를 다시 `RAM`에 저장하기 위해서는 데이터를 읽어들일 때의 과정을 역순으로 밟는다. 즉, 적절한 시점에 `CPU Cache Memory`에서 `RAM`으로 쓰기 작업을 하게 되는데, 이 의미는 `CPU`가 캐시에 쓰기 작업을 수행했다고 해서 바로 `RAM`으로 쓰기 작업을 수행할 필요가 없다는 것이다. 반대의 과정인 읽기 작업도 마찬가지이다.
 
-동시성 프로그래밍에서는 `CPU`와 `RAM`의 중간에 위치하는 `CPU Cache Memory`와 `병렬성`이라는 특징 때문에 다수의 스레드가 공유 자원에 접근할 때 두 가지 문제가 발생할 수 있다. 하나는 `가시성`의 문제이고, 다른 하나는 `동시 수행`의 문제이다. 사실 위의 두 문제는 동시성보다는 `병렬성` 때문에 발생하는 문제이지만, 자바 스레드는 동시성의 성질을 가지고 있으므로, 자바에서는 동시성 프로그래밍에서 발생하는 문제점이라고 부르는듯 하다.
+동시성 프로그래밍에서는 `CPU`와 `RAM`의 중간에 위치하는 `CPU Cache Memory`와 `병렬성`이라는 특징 때문에 다수의 스레드가 공유 자원에 접근할 때 두 가지 문제가 발생할 수 있다. 하나는 `가시성`의 문제이고, 다른 하나는 `동시 접근`의 문제이다. 사실 위의 두 문제는 동시성보다는 `병렬성` 때문에 발생하는 문제이지만, 자바 스레드는 동시성의 성질을 가지고 있으므로, 자바에서는 동시성 프로그래밍에서 발생하는 문제점이라고 부르는듯 하다.
 <br><br>
 
 ### 가시성(visibility)의 문제와 volatile 키워드
@@ -43,7 +43,7 @@ public class StopThread {
     }
 }
 ```
-메인 스레드가 1초 후 stopRequest를 true로 설정하면 `backgroundThread`는 반복문을 빠져나올 것처럼 보일 것이다. 하지만 실행시켜보면 다음의 코드는 영원히 수행될 수도 있다. 왜 이런 일이 발생한 것일까? 
+메인 스레드가 1초 후 stopRequest를 true로 설정하면 `backgroundThread`는 반복문을 빠져나올 것처럼 보일 것이다. 하지만 실행시켜보면 다음의 코드는 영원히 수행될 수도 있다. 왜 이런 일이 발생한 것일까? (사실 위 코드는 jvm의 `hoisting`이라는 최적화 기법과도 연관이 되어 있지만, 이 포스트의 주제를 벗어나므로 이에 대해 설명하지 않겠다.)
 
 다음의 그림을 살펴보자.
 <br>
@@ -51,7 +51,7 @@ public class StopThread {
 <br><br>
 CPU1에서 수행된 스레드를 `backgroundThread`, CPU2에서 수행된 스레드를 `mainThread`라고 하자. `mainThread`는 `CPU Cache Memory 2`와 `RAM`에 공유 변수인 `stopRequested`를 `true`로 쓰기 작업을 완료했으나, `backgroundThread`는 `CPU Cache Memory 1`에서 읽은 여전히 업데이트 되지 않은 `stopRequested`값을 사용한다. 이 값은 `false`이므로 무한 루프를 수행하게 된다. 즉, `mainThread`가 수정한 값을 `backgroundThread`가 언제쯤에나 보게 될지 보증할 수 없다. 이러한 문제점을 `가시성`의 문제라고 한다.
 
-이 문제를 해결하기 위해서는 `stopRequested` 변수를 `volatile`로 선언하면 된다. `volatile`로 선언된 변수에 대해서는 다음 그림과 같이 `CPU Cache Memory`를 거치지 않고 `RAM`으로 직접 읽고 쓰는 작업을 수행하게 된다.
+이 문제를 해결하기 위해서는 `stopRequested` 변수를 `volatile`로 선언하면 된다. `volatile`로 선언된 변수에 대해서는 다음 그림과 같이 `CPU Cache Memory`를 거치지 않고 `RAM`으로 직접 읽고 쓰는 작업을 수행하게 된다. 
 <br>
 ![concurrency-visibility-02](https://user-images.githubusercontent.com/19832483/51120190-e5e93c80-1857-11e9-9d30-29077ef281bb.png){: .u-mid-img}
 <br><br>
@@ -117,7 +117,6 @@ public class IncremantThread {
     }
 }
 ```
-`synchrozied`는 `가시성`의 문제도 해결한다. 하지만 `volatile`은 `동시 접근`의 문제를 해결하지 못 한다.
-
+`synchrozied`는 `가시성`의 문제도 해결한다. 하지만 `volatile`은 `동시 접근`의 문제를 해결하지 못 한다. 추가로 `synchrozied`와 `volatile`은 위에서 잠깐 언급한 jvm의 최적화 기법을 방지하는 역할을 한다.
 
 [Pre-Post]:https://badcandy.github.io/2019/01/14/concurrency-01
