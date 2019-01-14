@@ -117,7 +117,7 @@ public class IncremantThread {
     }
 }
 ```
-
-`synchrozied`는 `가시성`의 문제도 해결한다. 하지만 `volatile`은 `동시 접근`의 문제를 해결하지 못 한다. 추가로 `synchrozied`와 `volatile`은 위에서 잠깐 언급한 jvm의 최적화 기법을 방지하는 역할을 한다.
+<br>
+또한 `synchrozied`는 `가시성`의 문제도 해결한다. 하지만 `volatile`은 `동시 접근`의 문제를 해결하지 못 한다. 추가로 `synchrozied`와 `volatile`은 위에서 잠깐 언급한 jvm의 최적화 기법을 방지하는 역할을 한다.
 
 [Pre-Post]:https://badcandy.github.io/2019/01/14/concurrency-01
