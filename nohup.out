@@ -1490,3 +1490,8 @@ LiveReload address: http://127.0.0.1:35729
                     _posts/stackdriver/2019-01-06-stackdriver-logging.markdown
                     ...done in 0.349323 seconds.
                     
+[2019-01-14 21:47:28] ERROR `/2019/01/14/concurrency-02/2019-01-14-concurrency-01.markdown' not found.
+[2019-01-14 21:47:52] ERROR `/2019/01/14/concurrency-02/2019-01-14-concurrency-01.markdown' not found.
+[2019-01-14 21:47:55] ERROR `/2019/01/14/concurrency-02/2019-01-14-concurrency-01.markdown' not found.
+[2019-01-14 21:48:04] ERROR `/2019/01/14/concurrency-02/2019-01-14-concurrency-01.markdown' not found.
+[2019-01-14 22:24:00] ERROR `/2019/01/09/effective-java-3rd-chapter11/' not found.
