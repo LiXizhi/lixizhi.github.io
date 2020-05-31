@@ -1495,3 +1495,51 @@ LiveReload address: http://127.0.0.1:35729
 [2019-01-14 21:47:55] ERROR `/2019/01/14/concurrency-02/2019-01-14-concurrency-01.markdown' not found.
 [2019-01-14 21:48:04] ERROR `/2019/01/14/concurrency-02/2019-01-14-concurrency-01.markdown' not found.
 [2019-01-14 22:24:00] ERROR `/2019/01/09/effective-java-3rd-chapter11/' not found.
+Configuration file: /Users/badcandy/workspace/badcandy.github.io/_config.yml
+            Source: /Users/badcandy/workspace/badcandy.github.io
+       Destination: /Users/badcandy/workspace/badcandy.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.983 seconds.
+ Auto-regeneration: enabled for '/Users/badcandy/workspace/badcandy.github.io'
+LiveReload address: http://127.0.0.1:35729
+    Server address: http://127.0.0.1:4000
+  Server running... press ctrl-c to stop.
+        LiveReload: Browser connected
+[2019-03-10 15:11:42] ERROR `/favicon.ico' not found.
+      Regenerating: 1 file(s) changed at 2019-03-10 15:13:30
+                    _posts/kubernetes/2019-03-10-k8s-chapter04.markdown
+                    ...done in 0.44561 seconds.
+                    
+Configuration file: /Users/badcandy/workspace/badcandy.github.io/_config.yml
+            Source: /Users/badcandy/workspace/badcandy.github.io
+       Destination: /Users/badcandy/workspace/badcandy.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.799 seconds.
+ Auto-regeneration: enabled for '/Users/badcandy/workspace/badcandy.github.io'
+      Regenerating: 1 file(s) changed at 2020-05-31 18:33:17
+                    nohup.out
+                    ...done in 0.438254 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2020-05-31 18:33:39
+                    nohup.out
+                    ...done in 0.672709 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2020-05-31 18:33:40
+                    nohup.out
+                    ...done in 0.481991 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2020-05-31 18:48:44
+                    _posts/reactive/2020-05-31-reactive-reactor3-intro.markdown
+                    _posts/reactive/2020-05-31-reactvie-reactor3-intro.markdown
+                    ...done in 0.4509 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2020-05-31 18:48:46
+                    _posts/reactive/2020-05-31-reactive-reactor3-intro.markdown
+                    ...done in 0.452253 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2020-05-31 18:48:47
+                    _posts/reactive/2020-05-31-reactive-reactor3-intro.markdown
+                    ...done in 0.44023 seconds.
+                    
