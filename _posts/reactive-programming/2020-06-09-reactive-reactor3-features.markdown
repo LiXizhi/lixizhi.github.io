@@ -135,6 +135,8 @@ Subscriber의 구현체는 Publisher#subscribe(Subscriber<? super T> s) 호출�
 
 `Mono<T>`는 0..1개의 방출된 항목에 대한 시퀀스를 나타내는 `Publisher<T>`이다. 시퀀스에 대해서 어떠한 행위를 취할것인가는 `Subscriber`의 `onNext(T t)`, `onComplete()`, `onError(Throwable t)`를 이용해 작성할 수 있다. `Mono`는 `Flux`에서 사용할 수 있는 연산자 중 일부만 제공한다. (Mono가 제공하는 데이터는 최대 1개이니 count와 같은 연산자를 제공할 이유가 없을 것이다.) 
 
+<br/>
+### Mono의 동작
 다음은 `Mono`의 동작 방식이다.
 ![reactor-mono-01](https://user-images.githubusercontent.com/19832483/85026237-67629e00-b1b3-11ea-84c5-d669d7807fba.png)
 
